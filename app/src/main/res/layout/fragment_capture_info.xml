@@ -4,141 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CaptureInfo"
-    android:background="@color/darkGrey">
+    android:background="@color/darkGrey"
+    tools:context=".CaptureInfo">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="407dp"
+        android:layout_height="601dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textAlignment="center">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/idtxt"
+            android:layout_width="388dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/id"
+            android:ems="10"
+            android:hint="Tap Student ID Card"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
-            <EditText
-                android:id="@+id/idtxt"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Tap Student ID Card"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.444"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:drawableLeft="@drawable/id"
-                android:background="@color/white"
+            />
 
-                />
+        <EditText
+            android:id="@+id/nametxt"
+            android:layout_width="388dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/name"
+            android:ems="10"
+            android:hint="Student Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idtxt" />
 
-            <EditText
-                android:id="@+id/nametxt"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Student Name"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.444"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/idtxt"
-                android:drawableLeft="@drawable/name"/>
+        <EditText
+            android:id="@+id/passwordtxt"
+            android:layout_width="388dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/password"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nametxt" />
 
-            <EditText
-                android:id="@+id/passwordtxt"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.555"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nametxt"
-                android:drawableLeft="@drawable/password"
-                />
+        <EditText
+            android:id="@+id/emailtxt"
+            android:layout_width="388dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/email"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordtxt"
+            tools:layout_editor_absoluteY="729dp" />
 
-            <EditText
-                android:id="@+id/emailtxt"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Email"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteY="729dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordtxt"
-                android:layout_marginTop="28dp"
-                android:drawableLeft="@drawable/email"/>
+        <EditText
+            android:id="@+id/gendertxt"
+            android:layout_width="388dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/gender"
+            android:ems="10"
+            android:hint="Gender"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailtxt"
+            tools:layout_editor_absoluteY="729dp" />
 
-            <EditText
-                android:id="@+id/gendertxt"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Gender"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteY="729dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailtxt"
-                android:layout_marginTop="28dp"
-                android:drawableLeft="@drawable/gender"/>
+        <EditText
+            android:id="@+id/departmenttxt"
+            android:layout_width="388dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/department"
+            android:ems="10"
+            android:hint="Department"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gendertxt"
+            tools:layout_editor_absoluteY="729dp" />
 
-            <EditText
-                android:id="@+id/departmenttxt"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Department"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteY="729dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gendertxt"
-                android:layout_marginTop="28dp"
-                android:drawableLeft="@drawable/department"/>
-
-            <EditText
-                android:id="@+id/Sessiontxt"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Session"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.444"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/departmenttxt"
-                android:drawableLeft="@drawable/session"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/Sessiontxt"
+            android:layout_width="388dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/session"
+            android:ems="10"
+            android:hint="Session"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departmenttxt" />
 
         <Button
             android:id="@+id/addbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/colorAccent"
             android:text="ADD"
-            android:background="@color/colorAccent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sessiontxt" />
 
-    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
