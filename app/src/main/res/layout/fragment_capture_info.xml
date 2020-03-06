@@ -8,7 +8,7 @@
     tools:context=".CaptureInfo">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="407dp"
+        android:layout_width="match_parent"
         android:layout_height="601dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -23,7 +23,7 @@
 
         <EditText
             android:id="@+id/idtxt"
-            android:layout_width="388dp"
+            android:layout_width="370dp"
             android:layout_height="51dp"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
@@ -41,7 +41,7 @@
 
         <EditText
             android:id="@+id/nametxt"
-            android:layout_width="388dp"
+            android:layout_width="370dp"
             android:layout_height="51dp"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
@@ -57,7 +57,7 @@
 
         <EditText
             android:id="@+id/passwordtxt"
-            android:layout_width="388dp"
+            android:layout_width="370dp"
             android:layout_height="51dp"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
@@ -73,7 +73,7 @@
 
         <EditText
             android:id="@+id/emailtxt"
-            android:layout_width="388dp"
+            android:layout_width="370dp"
             android:layout_height="51dp"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
@@ -89,7 +89,7 @@
 
         <EditText
             android:id="@+id/gendertxt"
-            android:layout_width="388dp"
+            android:layout_width="370dp"
             android:layout_height="51dp"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
@@ -105,7 +105,7 @@
 
         <EditText
             android:id="@+id/departmenttxt"
-            android:layout_width="388dp"
+            android:layout_width="370dp"
             android:layout_height="51dp"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
@@ -121,7 +121,7 @@
 
         <EditText
             android:id="@+id/Sessiontxt"
-            android:layout_width="388dp"
+            android:layout_width="370dp"
             android:layout_height="51dp"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
@@ -135,20 +135,79 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/departmenttxt" />
 
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="237dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Sessiontxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Sessiontxt"
+            app:layout_constraintVertical_bias="0.52" />
+
         <Button
             android:id="@+id/addbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:background="@color/colorAccent"
             android:text="ADD"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.274"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Sessiontxt" />
+
+        <Button
+            android:id="@+id/viewbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/colorAccent"
+            android:text="READ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sessiontxt" />
+
+        <RadioGroup
+            android:layout_width="173dp"
+            android:layout_height="33dp"
+            app:layout_constraintBottom_toBottomOf="@+id/gendertxt"
+            app:layout_constraintEnd_toEndOf="@+id/gendertxt"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="@+id/gendertxt"
+            app:layout_constraintTop_toTopOf="@+id/gendertxt"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="85dp"
+                android:layout_height="33dp"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
+                android:text="Female" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="237dp"
+            android:layout_height="26dp"
+            app:layout_constraintBottom_toBottomOf="@+id/departmenttxt"
+            app:layout_constraintEnd_toEndOf="@+id/departmenttxt"
+            app:layout_constraintTop_toTopOf="@+id/departmenttxt" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
